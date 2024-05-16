@@ -7,10 +7,14 @@ class LightTheme {
 
   ThemeData get theme {
     return ThemeData(
-      primaryColor: primaryColor,
-      fontFamily: 'Poppins',
-      colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      useMaterial3: true,
-    );
+        primaryColor: primaryColor,
+        fontFamily: 'Poppins',
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+        appBarTheme: const AppBarTheme(centerTitle: false),
+        cardTheme: CardTheme(
+            shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8),
+        )));
   }
 }
