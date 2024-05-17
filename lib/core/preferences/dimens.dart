@@ -11,6 +11,8 @@ class Dimens {
     return MediaQuery.of(context).size.height;
   }
 
+  static const defaultSize = 16.0;
+
   static const dp2 = 2.0;
   static const dp4 = 4.0;
   static const dp8 = 8.0;
@@ -18,4 +20,8 @@ class Dimens {
   static const dp12 = 12.0;
   static const dp14 = 14.0;
   static const dp16 = 16.0;
+  static const dp18 = 18.0;
+  static const dp20 = 20.0;
+  static const dp24 = 24.0;
+  static const dp32 = 32.0;
 }

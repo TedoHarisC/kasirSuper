@@ -33,8 +33,14 @@ class _SplashScreenState extends State<SplashScreen> {
               MainAssets.logo,
               width: MediaQuery.of(context).size.width / 2,
             ),
-            16.0.height, // Ini juga menggunakan extension yaitu sizedbox extension
-            const HeadingText('Kasir Super'),
+            Dimens.defaultSize
+                .height, // Ini juga menggunakan extension yaitu sizedbox extension
+            HeadingText(
+              'Kasir Super',
+              style: TextStyle(
+                color: context.theme.primaryColor,
+              ),
+            ),
           ],
         ),
       ),
