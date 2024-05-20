@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kasirsuper/app/routes.dart';
 import 'package:kasirsuper/core/core.dart';
-import 'package:kasirsuper/features/home/home.dart';
 import 'package:kasirsuper/features/settings/settings.dart';
 
 class MyApp extends StatelessWidget {
@@ -14,20 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: LightTheme(AppColors.green).theme,
       home: const SplashScreen(),
-      onGenerateRoute: (settings) {
-        switch (settings.name) {
-          case HomePage.routeName:
-            return MaterialPageRoute(
-              builder: (_) => const HomePage(),
-            );
-          default:
-            return MaterialPageRoute(builder: (_) {
-              return const Scaffold(
-                body: Center(child: Text('Page Not Found')),
-              );
-            });
-        }
-      },
+      onGenerateRoute: routes,
     );
   }
 }

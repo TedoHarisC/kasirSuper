@@ -13,25 +13,25 @@ class RegularText extends StatelessWidget {
   final TextStyle? style;
   final TextAlign? textAlign;
 
-  factory RegularText.medium(
-      String text, TextStyle? style, TextAlign? textAlign) {
+  factory RegularText.medium(String text,
+      {TextStyle? style, TextAlign? textAlign}) {
     return RegularText(
       text,
       style: const TextStyle(
         fontWeight: FontWeight.w500,
       ).merge(style),
-      textAlign: textAlign,
+      textAlign: textAlign ?? TextAlign.start,
     );
   }
 
-  factory RegularText.semiBold(
-      String text, TextStyle? style, TextAlign? textAlign) {
+  factory RegularText.semiBold(String text,
+      {TextStyle? style, TextAlign? textAlign}) {
     return RegularText(
       text,
       style: const TextStyle(
         fontWeight: FontWeight.w600,
       ).merge(style),
-      textAlign: textAlign,
+      textAlign: textAlign ?? TextAlign.start,
     );
   }
 
