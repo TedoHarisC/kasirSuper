@@ -1,40 +1,52 @@
 import 'package:flutter/material.dart';
-import 'package:kasirsuper/core/core.dart';
+import 'package:kasirsuper/features/home/home.dart';
 
-part 'sections/card_section.dart';
+class MainPage extends StatefulWidget {
+  const MainPage({super.key});
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  static const String routeName = '/main';
 
-  static const String routeName = '/home';
+  @override
+  State<MainPage> createState() => _MainPageState();
+}
+
+class _MainPageState extends State<MainPage> {
+  int index = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Beranda'),
-      ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(Dimens.defaultSize),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            const _CardSection(
-              title: 'Total Penjualan',
-              value: 'Rp. 5.000.000.0000',
-            ),
-            Dimens.defaultSize.height,
-            const _CardSection(
-              title: 'Total Transaksi',
-              value: '300.000',
-            ),
-            Dimens.defaultSize.height,
-            const _CardSection(
-              title: 'Total Produk',
-              value: '654',
-            ),
-          ],
-        ),
+      // ignore: prefer_const_constructors
+      body: HomePage(),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: index,
+        onTap: (value) {
+          setState(() {
+            index = value;
+          });
+        },
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Beranda",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.business),
+            label: "Transaksi",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.business),
+            label: "POS",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.business),
+            label: "Produk",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.business),
+            label: "Lainnya",
+          )
+        ],
       ),
     );
   }

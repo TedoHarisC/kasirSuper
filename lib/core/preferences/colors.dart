@@ -51,4 +51,6 @@ class AppColors {
     600: Color(0xffCCCCCC),
     800: Color(0xffB8B8B8),
   });
+
+  static const textDisabled = Color(0xffA6A6A6);
 }

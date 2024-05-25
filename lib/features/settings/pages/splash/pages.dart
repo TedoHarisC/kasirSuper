@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(const Duration(seconds: 3)).then(
       (value) => Navigator.pushNamedAndRemoveUntil(
         context,
-        HomePage.routeName,
+        MainPage.routeName,
         (route) => false,
       ),
     );
@@ -39,6 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
               'Kasir Super',
               style: TextStyle(
                 color: context.theme.primaryColor,
+                fontSize: Dimens.dp32,
               ),
             ),
           ],

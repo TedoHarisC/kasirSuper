@@ -6,7 +6,8 @@ class LightTheme {
   final Color errorColor = AppColors.red;
   final Color scaffoldColor = AppColors.white;
   final Color textSolidColor = AppColors.black;
-  final Color borderColor = AppColors.white[500]!;
+  final Color borderColor = AppColors.white;
+  final Color textDisabledColor = AppColors.textDisabled;
 
   TextTheme get textTheme => TextTheme(
         headlineLarge: TextStyle(
@@ -63,6 +64,21 @@ class LightTheme {
 
   AppBarTheme get appBarTheme => const AppBarTheme(centerTitle: false);
 
+  BottomNavigationBarThemeData get bottomNavigationBarTheme {
+    return BottomNavigationBarThemeData(
+      type: BottomNavigationBarType.fixed,
+      selectedItemColor: primaryColor,
+      selectedLabelStyle: textTheme.labelMedium?.copyWith(
+        fontSize: Dimens.dp10,
+        color: primaryColor,
+      ),
+      unselectedLabelStyle: textTheme.labelMedium?.copyWith(
+        fontSize: Dimens.dp10,
+        color: textDisabledColor,
+      ),
+    );
+  }
+
   ThemeData get theme {
     return ThemeData(
       primaryColor: primaryColor,
@@ -77,6 +93,7 @@ class LightTheme {
       textTheme: textTheme,
       appBarTheme: appBarTheme,
       cardTheme: cardTheme,
+      bottomNavigationBarTheme: bottomNavigationBarTheme,
     );
   }
 }
