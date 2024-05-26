@@ -4,7 +4,7 @@ import 'package:kasirsuper/core/core.dart';
 class LightTheme {
   final Color primaryColor;
   final Color errorColor = AppColors.red;
-  final Color scaffoldColor = AppColors.white;
+  final Color scaffoldColor = AppColors.white[400]!;
   final Color textSolidColor = AppColors.black;
   final Color borderColor = AppColors.white;
   final Color textDisabledColor = AppColors.textDisabled;
