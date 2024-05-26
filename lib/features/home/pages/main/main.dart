@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:kasirsuper/core/core.dart';
 import 'package:kasirsuper/features/home/home.dart';
+import 'package:kasirsuper/features/pos/pages/index/page.dart';
+import 'package:kasirsuper/features/product/product.dart';
+import 'package:kasirsuper/features/settings/pages/pages.dart';
+import 'package:kasirsuper/features/transaction/pages/index/page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -13,11 +18,19 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   int index = 0;
 
+  final pages = const <Widget>[
+    HomePage(),
+    TransactionPage(),
+    POSPage(),
+    ProductPage(),
+    SettingPage(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       // ignore: prefer_const_constructors
-      body: HomePage(),
+      body: pages[index],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: index,
         onTap: (value) {
@@ -27,23 +40,23 @@ class _MainPageState extends State<MainPage> {
         },
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(AppIcons.storefront),
             label: "Beranda",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
+            icon: Icon(AppIcons.receipt),
             label: "Transaksi",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
+            icon: Icon(AppIcons.pos),
             label: "POS",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
+            icon: Icon(AppIcons.product),
             label: "Produk",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
+            icon: Icon(AppIcons.settings),
             label: "Lainnya",
           )
         ],
