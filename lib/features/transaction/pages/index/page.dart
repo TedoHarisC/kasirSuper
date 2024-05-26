@@ -12,13 +12,17 @@ class TransactionPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Transaksi'),
       ),
-      body: const SingleChildScrollView(
-        padding: EdgeInsets.all(Dimens.defaultSize),
-        child: Column(
-          children: [
-            _FilterSection(),
-          ],
-        ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          const _FilterSection(),
+          Expanded(
+            child: ListView(
+              padding: const EdgeInsets.all(Dimens.defaultSize),
+              children: const [],
+            ),
+          ),
+        ],
       ),
     );
   }
