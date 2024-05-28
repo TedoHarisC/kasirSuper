@@ -8,6 +8,7 @@ class LightTheme {
   final Color textSolidColor = AppColors.black;
   final Color borderColor = AppColors.white;
   final Color textDisabledColor = AppColors.textDisabled;
+  final Color inputColor = AppColors.white[200]!;
 
   TextTheme get textTheme => TextTheme(
         headlineLarge: TextStyle(
@@ -48,7 +49,7 @@ class LightTheme {
         labelMedium: TextStyle(
           fontSize: Dimens.dp12,
           fontWeight: FontWeight.w500,
-          color: textSolidColor,
+          color: textDisabledColor,
         ),
       );
 
@@ -107,6 +108,39 @@ class LightTheme {
     ));
   }
 
+  InputDecorationTheme get inputDecorationTheme {
+    return InputDecorationTheme(
+      fillColor: inputColor,
+      filled: true,
+      iconColor: textDisabledColor,
+      hintStyle: textTheme.labelMedium,
+      contentPadding: const EdgeInsets.symmetric(
+        horizontal: Dimens.defaultSize,
+        vertical: Dimens.dp12,
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(Dimens.dp8),
+        borderSide: BorderSide(color: inputColor),
+      ),
+      disabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(Dimens.dp8),
+        borderSide: BorderSide(color: inputColor),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(Dimens.dp8),
+        borderSide: BorderSide(color: primaryColor),
+      ),
+      focusedErrorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(Dimens.dp8),
+        borderSide: BorderSide(color: errorColor),
+      ),
+      errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(Dimens.dp8),
+        borderSide: BorderSide(color: errorColor),
+      ),
+    );
+  }
+
   ThemeData get theme {
     return ThemeData(
       primaryColor: primaryColor,
@@ -124,6 +158,7 @@ class LightTheme {
       bottomNavigationBarTheme: bottomNavigationBarTheme,
       elevatedButtonTheme: elevatedButtonTheme,
       outlinedButtonTheme: outlinedButtonTheme,
+      inputDecorationTheme: inputDecorationTheme,
     );
   }
 }

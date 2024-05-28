@@ -15,6 +15,12 @@ class ProductPage extends StatelessWidget {
         children: [
           const Padding(
             padding: EdgeInsets.all(Dimens.defaultSize),
+            child: SearchTextInput(
+              hintText: 'Search by product name or SKU',
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.all(Dimens.defaultSize),
             child: SubtitleText('3 Produk'),
           ),
           Expanded(
