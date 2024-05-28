@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kasirsuper/core/core.dart';
 
 part 'sections/filter_section.dart';
+part 'sections/item_section.dart';
 
 class TransactionPage extends StatelessWidget {
   const TransactionPage({super.key});
@@ -17,11 +18,12 @@ class TransactionPage extends StatelessWidget {
         children: [
           const _FilterSection(),
           Expanded(
-            child: ListView(
-              padding: const EdgeInsets.all(Dimens.defaultSize),
-              children: const [],
-            ),
-          ),
+              child: ListView.builder(
+            itemBuilder: (context, index) {
+              return const _ItemSection();
+            },
+            itemCount: 3,
+          )),
         ],
       ),
     );
