@@ -141,6 +141,12 @@ class LightTheme {
     );
   }
 
+  DividerThemeData get dividerTheme {
+    return const DividerThemeData(
+      color: AppColors.white,
+    );
+  }
+
   ThemeData get theme {
     return ThemeData(
       primaryColor: primaryColor,
@@ -159,6 +165,7 @@ class LightTheme {
       elevatedButtonTheme: elevatedButtonTheme,
       outlinedButtonTheme: outlinedButtonTheme,
       inputDecorationTheme: inputDecorationTheme,
+      dividerTheme: dividerTheme,
     );
   }
 }
