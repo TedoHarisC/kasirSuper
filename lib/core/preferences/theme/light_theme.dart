@@ -4,7 +4,7 @@ import 'package:kasirsuper/core/core.dart';
 class LightTheme {
   final Color primaryColor;
   final Color errorColor = AppColors.red;
-  final Color scaffoldColor = AppColors.white[400]!;
+  final Color scaffoldColor = AppColors.white[200]!;
   final Color textSolidColor = AppColors.black;
   final Color borderColor = AppColors.white;
   final Color textDisabledColor = AppColors.textDisabled;
@@ -66,6 +66,7 @@ class LightTheme {
   AppBarTheme get appBarTheme => AppBarTheme(
         centerTitle: false,
         surfaceTintColor: scaffoldColor,
+        shadowColor: Colors.black.withOpacity(0.4),
       );
 
   BottomNavigationBarThemeData get bottomNavigationBarTheme {
