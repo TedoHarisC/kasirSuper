@@ -1,16 +1,18 @@
-# kasirsuper
+# Kasir Super App
 
-A new Flutter project.
+<img src="assets/images/thumbnail.png"/>
 
-## Getting Started
+-- 
 
-This project is a starting point for a Flutter application.
+Introducing the Project Cashier Application, equipped to handle QRIS Payments (Indonesian Payment QR Code Standard) and 
+seamlessly integrate with Bluetooth Printers for quick and efficient invoice printing.
 
-A few resources to get you started if this is your first Flutter project:
+This project was result from online courses on **KodingWorks** ([Check this out](https://kodingworks.io/))
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+-- 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Regards
+**Koding Works** ([Alamat nya disini](https://kodingworks.io/))
+
+## Author(s)
+**Tedo Haris Chandra** ([Follow my Instagram](https://instagram.com/dooooo.dev))
