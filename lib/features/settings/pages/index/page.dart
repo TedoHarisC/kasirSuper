@@ -39,6 +39,52 @@ class SettingPage extends StatelessWidget {
               ),
             ],
           ),
+          const Divider(
+            thickness: Dimens.dp8,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(Dimens.dp16),
+                child: RegularText.semiBold('Perangkat Tambahan'),
+              ),
+              ItemMenuSetting(
+                title: 'Printer',
+                icon: Icons.print,
+                onTap: () {},
+              ),
+              const Divider(height: 0),
+              ItemMenuSetting(
+                title: 'Atur Struk',
+                icon: AppIcons.coupon,
+                onTap: () {},
+              ),
+            ],
+          ),
+          const Divider(
+            thickness: Dimens.dp8,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(Dimens.dp16),
+                child: RegularText.semiBold('Info Lainnya'),
+              ),
+              ItemMenuSetting(
+                title: 'Kebijakan Privasi',
+                icon: AppIcons.verified,
+                onTap: () {},
+              ),
+              const Divider(height: 0),
+              ItemMenuSetting(
+                title: 'Beri Rating',
+                icon: AppIcons.star,
+                onTap: () {},
+              ),
+            ],
+          ),
           Padding(
             padding: const EdgeInsets.all(Dimens.dp16),
             child: OutlinedButton(
