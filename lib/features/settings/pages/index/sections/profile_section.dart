@@ -42,7 +42,9 @@ class _ProfileSection extends StatelessWidget {
             ),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, ProfilePage.routeName);
+            },
             icon: Icon(
               AppIcons.edit,
               color: context.theme.primaryColor,

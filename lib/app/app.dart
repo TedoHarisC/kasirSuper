@@ -11,8 +11,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => BottomNavBloc(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => BottomNavBloc()),
+        BlocProvider(create: (context) => ProfileBloc()),
+      ],
       child: MaterialApp(
         title: 'Kasir Super',
         debugShowCheckedModeBanner: false,
