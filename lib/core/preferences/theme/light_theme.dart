@@ -66,7 +66,7 @@ class LightTheme {
   AppBarTheme get appBarTheme => AppBarTheme(
         centerTitle: false,
         surfaceTintColor: scaffoldColor,
-        shadowColor: Colors.black.withOpacity(0.4),
+        shadowColor: Colors.black.withAlpha((0.4 * 255).round()),
       );
 
   BottomNavigationBarThemeData get bottomNavigationBarTheme {

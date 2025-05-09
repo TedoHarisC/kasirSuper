@@ -12,13 +12,14 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Future.delayed(const Duration(seconds: 3)).then(
-      (value) => Navigator.pushNamedAndRemoveUntil(
+    Future.delayed(const Duration(seconds: 3)).then((value) {
+      Navigator.pushNamedAndRemoveUntil(
+        // ignore: use_build_context_synchronously
         context,
         MainPage.routeName,
         (route) => false,
-      ),
-    );
+      );
+    });
     super.initState();
   }
 
